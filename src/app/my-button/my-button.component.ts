@@ -23,14 +23,8 @@ export class MyButtonComponent implements OnInit {
   }
 
   clickTest(): void {
-    // this.isLiked = this.servicePlaceholder(this.isLiked);
     this.isLiked = this.myService.likeImage(this.isLiked);
     console.log("isLiked = " + this.isLiked);
   }
-
-  // This will be done in the service
-/*   servicePlaceholder(flagIn : boolean): boolean {
-    return !flagIn;
-  } */
 
 }
