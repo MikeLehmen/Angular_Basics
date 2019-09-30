@@ -1,4 +1,9 @@
 <h3>
   <app-my-image></app-my-image>
   <app-my-button></app-my-button>
+  <div>
+    <ul id="messageList">
+      <li *ngFor="let m of messages.messages">{{ m.user.name }} : {{ m.text }} @ {{ m.timestamp }}</li>
+    </ul>
+  </div>
 </h3>
