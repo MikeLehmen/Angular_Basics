@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyImageComponent } from './my-image/my-image.component';
+import { MyButtonComponent } from './my-button/my-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyImageComponent
+    MyImageComponent,
+    MyButtonComponent
   ],
   imports: [
     BrowserModule,
