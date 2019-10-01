@@ -7,14 +7,15 @@ import { MyServiceService } from '../my-service.service';
   styleUrls: ['./my-button.component.css']
 })
 export class MyButtonComponent implements OnInit {
-  myService: MyServiceService;
+  //private myService: MyServiceService;
   isLiked: boolean;
 
-  constructor() { 
+  constructor(private myService : MyServiceService) { 
     // Create injector
-    const injector : any = ReflectiveInjector.resolveAndCreate([MyServiceService]);
+    //const injector : any = ReflectiveInjector.resolveAndCreate([MyServiceService]);
     // Get and save the service handle
-    this.myService = injector.get(MyServiceService);
+    //this.myService = injector.get(MyServiceService);
+    
 
     this.isLiked = false;
   }

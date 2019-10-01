@@ -10,14 +10,17 @@ import { Messages } from './models/messages.model';
 export class AppComponent {
   messages : Messages;
 
-  constructor() {
-    const injector : any = ReflectiveInjector.resolveAndCreate([MessagesService]);
+  constructor(messagesService : MessagesService) {
+    //const injector : any = ReflectiveInjector.resolveAndCreate([MessagesService]);
 
-    let messageService = injector.get(MessagesService);
+    //let messageService = injector.get(MessagesService);
 
-    this.messages = messageService.initMessages();
+    //this.messages = messageService.initMessages();
+
+    this.messages = messagesService.initMessages();
 
     // Debug
     this.messages.messages.forEach( function(m) { console.log(m.user.name + ": " + m.text + "   @ " + m.timestamp); });
   }
+  
 }
