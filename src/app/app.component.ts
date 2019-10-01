@@ -1,6 +1,7 @@
-import { Component, ReflectiveInjector } from '@angular/core';
+import { Component } from '@angular/core';
 import { MessagesService } from './messages.service';
 import { Messages } from './models/messages.model';
+import { IMessages } from './models/messages.interface';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +9,20 @@ import { Messages } from './models/messages.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  messages : Messages;
+  messages : IMessages;
 
   constructor(messagesService : MessagesService) {
+    // Old way using concrete injector
     //const injector : any = ReflectiveInjector.resolveAndCreate([MessagesService]);
-
     //let messageService = injector.get(MessagesService);
-
     //this.messages = messageService.initMessages();
 
     this.messages = messagesService.initMessages();
 
     // Debug
-    this.messages.messages.forEach( function(m) { console.log(m.user.name + ": " + m.text + "   @ " + m.timestamp); });
+    this.messages.getMessages().forEach( function(m) { 
+      console.log(m.getUser().getName() + ": " + m.getText() + "   @ " + m.getTimestamp()); 
+    });
   }
   
 }

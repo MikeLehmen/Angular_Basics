@@ -14,7 +14,7 @@ export class MessagesService {
     let out : Messages = new Messages;
 
     let newMessage = new Message(new User("Cthulu"), new Date("June 17, 1974 04:12:43"), "I'm still asleep...");
-    out.messages.push(newMessage);
+    out.addMessage(newMessage);
 
     return out;
   }
