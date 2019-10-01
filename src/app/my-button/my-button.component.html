@@ -1,5 +1,7 @@
 <!-- <p>my-button works!</p> -->
-<div id="imageDiv">
-    <button [ngClass]="{liked: isLiked}" (click)="clickTest()">Click Me!</button>
-    <span style="margin-left: 10px">Image is Liked == {{ isLiked }}</span>  <!-- Style should go in css file -->
-</div>
+<span id="imageSpan">
+    <span id="buttonSpan">
+        <button [ngClass]="{liked: isLiked}" (click)="clickTest()">Click Me!</button>
+    </span>
+    <span class="displaySpan">Image is Liked == {{ isLiked }}</span>  <!-- Style should go in css file -->
+</span>

@@ -1,3 +1,13 @@
+h3 {
+    font-family: sans-serif;
+}
+
 li {
     list-style-type: none;
+    font-family: sans-serif;
+}
+
+.flexCenterParent {
+    display: flex;
+    align-items: center;
 }

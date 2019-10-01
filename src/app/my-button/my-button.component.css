@@ -1,3 +1,8 @@
 .liked {
     background-color: green;
 }
+
+.displaySpan {
+    margin-left: 10px;
+    font-family: sans-serif;
+}
