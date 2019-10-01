@@ -3,7 +3,8 @@
   <app-my-button></app-my-button>
   <div>
     <ul id="messageList">
-      <li *ngFor="let m of messages.getMessages()">{{ m.getUser().getName() }} : {{ m.getText() }} @ {{ m.getTimestamp() }}</li>
+      <h3>Messages</h3>
+      <li *ngFor="let m of messages.getMessages()">{{ m.getUser().getName() }} : {{ m.getText() }} (@ {{ m.getTimestamp() }})</li>
     </ul>
   </div>
 </h3>
